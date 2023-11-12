@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VI Software - Natal não remasterizado</title>
+    <style>
+        body {
+            font-family: 'Consolas', monospace;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: #fff;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 2rem;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 998;
+        }
+
+        .logo {
+            display: block;
+            margin: 40px auto;
+            max-width: 400px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .content-heading {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .content-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .content-buttons button {
+            background-color: #e44d26;
+            color: #fff;
+            padding: 15px 30px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .content-buttons button:hover {
+            background-color: #ff6347;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #fff;
+        }
+
+        footer a {
+            color: yellow; /* Changed the color of the footer links to yellow */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Popup -->
+    <div id="overlay"></div>
+    <div id="popup">
+        <p>Este servicio es prestado por el VIS Discord. La responsabilidad está sujeta en todo momento al usuario final. Es mandatario seguir los Términos de Servicio de VI Software y la normativa de la experiencia.</p>
+        <button onclick="closePopup()">Continuar navegando</button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <img class="logo" src="img/vis-logo.png" alt="VI Software Logo">
+        <h1>VI Software - Natal não remasterizado</h1>
+    </header>
+
+    <!-- Content -->
+    <main>
+        <p class="content-heading">Enlaces populares</p>
+        <div class="content-buttons">
+            <button onclick="location.href='https://m.youtube.com'">YouTube</button>
+            <button onclick="location.href='https://google.com'">Google</button>
+            <button onclick="location.href='https://www.galnod.live'">GalaxyNode</button>
+            <button onclick="location.href='https://www.galnod.com'">GalNod</button>
+            <button onclick="location.href='https://musiclasenia.blogspot.com'">Musiclasenia</button>
+        </div>
+    </main>
+
+    <!-- JS  -->
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        window.onload = showPopup;
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 <a href="https://github.com/VI-Software">VI Software</a> y <a href="https://github.com/orgs/VI-Software/outside-collaborators">contribuidores</a>. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
